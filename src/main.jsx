@@ -7,6 +7,8 @@ import Root from './pages/Root';
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import AddProduct from './pages/AddProduct';
+import ProductDetails from './pages/ProductDetails';
+import BrandPage from './pages/BrandPage';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,17 @@ const router = createBrowserRouter([
       {
         path: '/addProduct',
         element: <AddProduct></AddProduct>,
+      },
+      {
+        path: '/:brandName',
+        element: <BrandPage></BrandPage>,
+        loader: () => fetch('http://localhost:5000/product'),
+      },
+
+      {
+        path: '/productDetails/:id',
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch('http://localhost:5000/product'),
       },
     ],
   },

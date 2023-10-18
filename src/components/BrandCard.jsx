@@ -1,10 +1,12 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from 'react-router-dom';
+
 const BrandCard = ({ brand }) => {
   // console.log(brand);
   const { image_url, brand_name } = brand;
   return (
-    <a href="#" className="block">
+    <Link to={`/${brand_name}`}>
       <img
         alt="Signage"
         src={image_url}
@@ -18,7 +20,7 @@ const BrandCard = ({ brand }) => {
 
         {/* <p className="mt-0.5 opacity-50 sm:mt-0">Branding / Signage</p> */}
       </div>
-    </a>
+    </Link>
   );
 };
 
