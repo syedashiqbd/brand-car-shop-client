@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 const BrandCard = ({ brand }) => {
-  console.log(brand);
+  // console.log(brand);
   const { image_url, brand_name } = brand;
   return (
     <a href="#" className="block">
