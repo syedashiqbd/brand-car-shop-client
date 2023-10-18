@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import Navbar from './Navbar';
 
 const AddProduct = () => {
@@ -24,6 +25,14 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Product added successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool',
+          });
+        }
       });
   };
 
