@@ -13,6 +13,18 @@ const AddProduct = () => {
     const photo = form.photo.value;
     const product = { name, brand, type, price, description, rating, photo };
     console.log(product);
+
+    fetch('http://localhost:5000/product', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
   };
 
   return (
@@ -42,7 +54,7 @@ const AddProduct = () => {
                 <option value="Mercedes-Benz">Mercedes-Benz</option>
                 <option value="BMW">BMW</option>
                 <option value="Ferrari">Ferrari</option>
-                <option value="Audi">Tesla</option>
+                <option value="Tesla">Tesla</option>
                 <option value="Lamborghini">Lamborghini</option>
                 <option value="Porsche">Porsche</option>
               </select>
