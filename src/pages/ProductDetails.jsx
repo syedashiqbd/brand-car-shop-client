@@ -1,13 +1,47 @@
 import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
+import Swal from 'sweetalert2';
 
 const ProductDetails = () => {
   const allProducts = useLoaderData();
   const { id } = useParams();
 
   const product = allProducts.find((prod) => prod._id == id);
-  console.log(product);
+
+  const name = product.name;
+  const brand = product.brand;
+  const type = product.type;
+  const price = product.price;
+  const description = product.description;
+  const rating = product.rating;
+  const photo = product.photo;
+
+  const cartProduct = { name, brand, type, price, description, rating, photo };
+
+  const handleAddToCart = () => {
+    console.log(cartProduct);
+    fetch('http://localhost:5000/cartProduct', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(product),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: 'Success!',
+            text: 'Product added to Cart Successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool',
+          });
+        }
+      });
+  };
+
   return (
     <div className="lg:w-[1152px] w-[400px] mx-auto">
       <Navbar></Navbar>
@@ -50,7 +84,10 @@ const ProductDetails = () => {
 
             <div className="flex gap-4">
               <form className="mt-4 lg:w-1/4 w-full mx-auto">
-                <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                <button
+                  onClick={handleAddToCart}
+                  className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
+                >
                   Add to Cart
                 </button>
               </form>
