@@ -88,9 +88,11 @@ const BrandPage = () => {
                     </Link>
                   </form>
                   <form className="mt-4 w-full">
-                    <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
-                      Update
-                    </button>
+                    <Link to={`/updateProduct/${brand._id}`}>
+                      <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                        Update
+                      </button>
+                    </Link>
                   </form>
                 </div>
               </div>

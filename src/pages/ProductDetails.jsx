@@ -49,7 +49,7 @@ const ProductDetails = () => {
             <p className="mt-5">{product.description}</p>
 
             <div className="flex gap-4">
-              <form className="mt-4 w-full">
+              <form className="mt-4 lg:w-1/4 w-full mx-auto">
                 <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
                   Add to Cart
                 </button>
