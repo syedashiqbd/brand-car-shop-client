@@ -4,87 +4,47 @@ import Navbar from './Navbar';
 
 const BrandPage = () => {
   const { brandName } = useParams();
-  const loadingBrand = useLoaderData();
+  const { loadingBrand, sliderImage } = useLoaderData();
 
   const brands = loadingBrand.filter((brand) => brand.brand === brandName);
-
+  const slider = sliderImage.filter((item) => item.brand === brandName);
+  console.log(slider);
   return (
     <div className="lg:w-[1152px] w-[400px] mx-auto">
       <Navbar></Navbar>
-      {/* Slider */}
-      <div className="carousel w-full h-[500px] rounded-lg">
-        <div id="slide1" className="carousel-item relative w-full">
-          {brands?.map((brand) => (
+
+      {/* Slider here */}
+      <div className="carousel w-full lg:h-[550px] rounded-lg mt-7">
+        {slider.map((image, index) => (
+          <div
+            id={`slide${index + 1}`}
+            className="carousel-item relative  w-full "
+            key={image.id}
+          >
             <img
-              key={brand._id}
-              src={brand.photo}
-              className="w-full h-[500px] object-cover "
+              src={image.slideImg}
+              className="w-full lg:h-[550px] object-cover"
             />
-          ))}
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide2" className="btn btn-circle">
-              ❯
-            </a>
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a
+                href={`#slide${index === 0 ? slider.length : index}`}
+                className="btn btn-circle"
+              >
+                ❮
+              </a>
+              <a
+                href={`#slide${index === slider.length - 1 ? 1 : index + 2}`}
+                className="btn btn-circle"
+              >
+                ❯
+              </a>
+            </div>
           </div>
-        </div>
-        <div id="slide2" className="carousel-item relative w-full">
-          {/* {brands?.map((brand) => (
-            <img
-              key={brand._id}
-              src={brand.photo}
-              className="w-full h-[500px] object-cover "
-            />
-          ))} */}
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide3" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide3" className="carousel-item relative w-full">
-          {/* {brands?.map((brand) => (
-            <img
-              key={brand._id}
-              src={brand.photo}
-              className="w-full h-[500px] object-cover "
-            />
-          ))} */}
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide2" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide4" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
-        <div id="slide4" className="carousel-item relative w-full">
-          {/* {brands?.map((brand) => (
-            <img
-              key={brand._id}
-              src={brand.photo}
-              className="w-full h-[500px] object-cover "
-            />
-          ))} */}
-          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide3" className="btn btn-circle">
-              ❮
-            </a>
-            <a href="#slide1" className="btn btn-circle">
-              ❯
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* product card */}
-      <h1 className="divider my-10 text-gray-700 text-4xl font-semibold">
+      <h1 className="divider my-16 text-gray-700 text-4xl font-semibold">
         Our Luxuries Collection for You
       </h1>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">

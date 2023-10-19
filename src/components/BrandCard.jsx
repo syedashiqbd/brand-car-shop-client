@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 
 const BrandCard = ({ brand }) => {
   // console.log(brand);
-  const { image_url, brand_name } = brand;
+  const { image_url, brand_name,  } = brand;
+ 
   return (
-    <Link to={`/${brand_name}`}>
+    <Link to={`/brand/${brand_name}`}>
       <img
         alt="Signage"
         src={image_url}

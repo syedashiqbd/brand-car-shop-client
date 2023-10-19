@@ -26,9 +26,15 @@ const router = createBrowserRouter([
         element: <AddProduct></AddProduct>,
       },
       {
-        path: '/:brandName',
+        path: '/brand/:brandName',
         element: <BrandPage></BrandPage>,
-        loader: () => fetch('http://localhost:5000/product'),
+        loader: async () => {
+          const productResponse = await fetch('http://localhost:5000/product');
+          const sliderResponse = await fetch('/slider.json');
+          const loadingBrand = await productResponse.json();
+          const sliderImage = await sliderResponse.json();
+          return { loadingBrand, sliderImage };
+        },
       },
 
       {
