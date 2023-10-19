@@ -26,7 +26,7 @@ const ProductDetails = () => {
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify(product),
+      body: JSON.stringify(cartProduct),
     })
       .then((res) => res.json())
       .then((data) => {
