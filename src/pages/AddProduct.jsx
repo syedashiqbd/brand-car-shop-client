@@ -133,7 +133,7 @@ const AddProduct = () => {
           <input
             type="submit"
             value="Add product"
-            className="btn w-full  mt-8"
+            className="btn w-full bg-[#FFB400] text-white  mt-8"
           />
         </form>
       </div>

@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import AuthProvider from './provider/AuthProvider';
 import { Toaster } from 'react-hot-toast';
+import PrivateRoute from './privateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/addProduct',
-        element: <AddProduct></AddProduct>,
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/brand/:brandName',
@@ -46,7 +51,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/productDetails/:id',
-        element: <ProductDetails></ProductDetails>,
+        element: (
+          <PrivateRoute>
+            <ProductDetails></ProductDetails>
+          </PrivateRoute>
+        ),
         loader: () =>
           fetch('https://prestige-car-hub-server.vercel.app/product'),
       },
@@ -60,7 +69,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/myCart',
-        element: <MyCart></MyCart>,
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
         loader: () =>
           fetch('https://prestige-car-hub-server.vercel.app/cartProduct'),
       },
