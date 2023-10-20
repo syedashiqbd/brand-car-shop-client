@@ -1,20 +1,74 @@
 import Navbar from './Navbar';
 import loginSVG from '../assets/login.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { authContext } from '../provider/AuthProvider';
+import toast from 'react-hot-toast';
+import { BsGithub } from 'react-icons/bs';
+import { FcGoogle } from 'react-icons/fc';
 
 const Login = () => {
+  const { logIn, logInWithGoogle } = useContext(authContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+
+    logIn(email, password)
+      .then(() => {
+        toast.success('Successfully logged-in', {
+          style: {
+            background: '#FFB400',
+            color: 'white',
+          },
+        });
+        // e.target.reset();
+
+        // navigate after login
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch(() => {
+        toast.error('Invalid-login-credentials', {
+          style: {
+            background: '#790e0e',
+            color: 'white',
+          },
+        });
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    logInWithGoogle()
+      .then(() => {
+        toast.success('Successfully logged-in', {
+          style: {
+            background: '#FFB400',
+            color: 'white',
+          },
+        });
+
+        // navigate after login
+        navigate(location?.state ? location.state : '/');
+      })
+      .catch(() => {
+        toast.error('Logged In failed !!', {
+          style: {
+            background: '#F2277E',
+            color: 'white',
+          },
+        });
+      });
   };
   return (
     <div className="lg:w-[1152px] w-[400px] mx-auto">
       <Navbar></Navbar>
 
-      <div className="lg:flex items-center justify-center mt-20 gap-10">
+      <div className="lg:flex items-center justify-center my-20 gap-10">
         <div className="text-center lg:text-left">
           <img className="w-[500px]" src={loginSVG} alt="" />
         </div>
@@ -63,6 +117,21 @@ const Login = () => {
                 </Link>
               </p>
             </form>
+          </div>
+          <div className="flex flex-col w-full border-opacity-50 mb-4"></div>
+          <div className="divider mt-10">Login With</div>
+          <div className="grid card  rounded-box  ">
+            <div className="flex justify-center gap-4">
+              <button
+                onClick={handleGoogleSignIn}
+                className=" lg:py-3 lg:px-5 py-1 px-2 bg-gray-200 text-gray-700   rounded  flex items-center justify-center gap-1  "
+              >
+                <FcGoogle className="text-4xl"></FcGoogle>Login with Google
+              </button>
+              <button className="lg:py-3 lg:px-5 py-1 px-2 bg-gray-200 text-gray-700    rounded  flex items-center justify-center gap-1 ">
+                <BsGithub className="text-4xl"></BsGithub>Login with Github
+              </button>
+            </div>
           </div>
         </div>
       </div>

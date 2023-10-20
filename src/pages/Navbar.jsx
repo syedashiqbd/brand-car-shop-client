@@ -1,6 +1,21 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { authContext } from '../provider/AuthProvider';
+import toast from 'react-hot-toast';
+import userDefaultPic from '../assets/user.png';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(authContext);
+
+  const handleLogOut = () => {
+    toast.success('Successfully logged-out', {
+      style: {
+        background: '#FFB400',
+        color: 'white',
+      },
+    });
+    logOut();
+  };
   const navLinks = (
     <>
       <li>
@@ -47,9 +62,48 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login">
-          <button className="btn">Login</button>
-        </Link>
+        {user ? (
+          <div className="dropdown dropdown-end ">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                {user.photoURL ? (
+                  <img className="rounded-full" src={user.photoURL} />
+                ) : (
+                  <img src={userDefaultPic} />
+                )}
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 space-y-2"
+            >
+              <p className="font-bold mb-5 text-center border-b-2 pb-2">
+                {user?.displayName}
+              </p>
+              <li>
+                <Link to="/dashboard">Dashboard</Link>
+              </li>
+              <li>
+                <Link to="/profile">Profile</Link>
+              </li>
+
+              <li>
+                <p
+                  onClick={handleLogOut}
+                  className=" bg-[#FFB400] text-white py-2 hover:bg-yellow-600 hover:text-white focus:outline-none focus:ring active:text-yellow-500 "
+                >
+                  Logout
+                </p>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login">
+            <button className="rounded bg-[#FFB400] text-white lg:px-8 lg:py-2 px-6 py-1 hover:bg-yellow-600 focus:outline-none focus:ring active:text-yellow-500">
+              Login
+            </button>
+          </Link>
+        )}
       </div>
     </div>
   );
