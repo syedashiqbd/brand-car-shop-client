@@ -31,7 +31,9 @@ const router = createBrowserRouter([
         path: '/brand/:brandName',
         element: <BrandPage></BrandPage>,
         loader: async () => {
-          const productResponse = await fetch('http://localhost:5000/product');
+          const productResponse = await fetch(
+            'https://prestige-car-hub-server.vercel.app/product'
+          );
           const sliderResponse = await fetch('/slider.json');
           const loadingBrand = await productResponse.json();
           const sliderImage = await sliderResponse.json();
@@ -41,18 +43,22 @@ const router = createBrowserRouter([
       {
         path: '/productDetails/:id',
         element: <ProductDetails></ProductDetails>,
-        loader: () => fetch('http://localhost:5000/product'),
+        loader: () =>
+          fetch('https://prestige-car-hub-server.vercel.app/product'),
       },
       {
         path: '/updateProduct/:id',
         element: <UpdateProduct></UpdateProduct>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/product/${params.id}`),
+          fetch(
+            `https://prestige-car-hub-server.vercel.app/product/${params.id}`
+          ),
       },
       {
         path: '/myCart',
         element: <MyCart></MyCart>,
-        loader: () => fetch('http://localhost:5000/cartProduct'),
+        loader: () =>
+          fetch('https://prestige-car-hub-server.vercel.app/cartProduct'),
       },
     ],
   },

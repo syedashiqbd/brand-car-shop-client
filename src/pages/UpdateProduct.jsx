@@ -20,7 +20,7 @@ const UpdateProduct = () => {
     const product = { name, brand, type, price, description, rating, photo };
     console.log(product);
 
-    fetch(`http://localhost:5000/product/${_id}`, {
+    fetch(`https://prestige-car-hub-server.vercel.app/product/${_id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',

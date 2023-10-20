@@ -15,7 +15,7 @@ const AddProduct = () => {
     const product = { name, brand, type, price, description, rating, photo };
     console.log(product);
 
-    fetch('http://localhost:5000/product', {
+    fetch('https://prestige-car-hub-server.vercel.app/product', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
