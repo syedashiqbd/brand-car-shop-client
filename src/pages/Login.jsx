@@ -3,6 +3,13 @@ import loginSVG from '../assets/login.svg';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+  };
   return (
     <div className="lg:w-[1152px] w-[400px] mx-auto">
       <Navbar></Navbar>
@@ -16,13 +23,14 @@ const Login = () => {
             Login now !
           </h1>
           <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-            <form className="card-body ">
+            <form onSubmit={handleLogin} className="card-body ">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
                   className="input input-bordered"
                   required
@@ -34,6 +42,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
+                  name="password"
                   placeholder="Enter your password"
                   className="input input-bordered"
                   required
