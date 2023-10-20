@@ -57,85 +57,86 @@ const Register = () => {
       );
   };
   return (
-    <div className="lg:w-[1152px] w-[400px] mx-auto">
+    <div>
       <Navbar></Navbar>
-
-      <div className="lg:flex items-center justify-center mt-20 gap-10">
-        <div className="text-center lg:text-left">
-          <img className="w-[600px]" src={registerSVG} alt="" />
-        </div>
-        <div>
-          <h1 className="text-5xl font-bold mb-8 text-center">
-            Register Please!
-          </h1>
-          <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-            <form onSubmit={handleRegister} className="card-body ">
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Enter your name"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Photo</span>
-                </label>
-                <input
-                  type="text"
-                  name="photo"
-                  placeholder="Enter photo URL"
-                  className="input input-bordered"
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="input input-bordered"
-                  required
-                />
-              </div>
-              <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Enter your password"
-                  className="input input-bordered"
-                  required
-                />
-                {registerError && (
-                  <p className="text-red-700 mt-4">{registerError}</p>
-                )}
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
-              </div>
-              <div className="form-control mt-6 ">
-                <button className="btn bg-[#FFB400] text-white">
-                  Register
-                </button>
-              </div>
-              <p className=" label-text-alt text-center ">
-                Already have account? Please{' '}
-                <Link to="/login" className="link-hover font-semibold">
-                  Login
-                </Link>
-              </p>
-            </form>
+      <div className="lg:w-[1152px] w-[400px] mx-auto">
+        <div className="lg:flex items-center justify-center mt-20 gap-10">
+          <div className="text-center lg:text-left">
+            <img className="w-[600px]" src={registerSVG} alt="" />
+          </div>
+          <div>
+            <h1 className="text-5xl font-bold mb-8 text-center">
+              Register Please!
+            </h1>
+            <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
+              <form onSubmit={handleRegister} className="card-body ">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    className="input input-bordered"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Photo</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="photo"
+                    placeholder="Enter photo URL"
+                    className="input input-bordered"
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    className="input input-bordered"
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text">Password</span>
+                  </label>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    className="input input-bordered"
+                    required
+                  />
+                  {registerError && (
+                    <p className="text-red-700 mt-4">{registerError}</p>
+                  )}
+                  <label className="label">
+                    <a href="#" className="label-text-alt link link-hover">
+                      Forgot password?
+                    </a>
+                  </label>
+                </div>
+                <div className="form-control mt-6 ">
+                  <button className="btn bg-[#FFB400] text-white">
+                    Register
+                  </button>
+                </div>
+                <p className=" label-text-alt text-center ">
+                  Already have account? Please{' '}
+                  <Link to="/login" className="link-hover font-semibold">
+                    Login
+                  </Link>
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </div>
