@@ -11,6 +11,8 @@ import ProductDetails from './pages/ProductDetails';
 import BrandPage from './pages/BrandPage';
 import UpdateProduct from './pages/UpdateProduct';
 import MyCart from './pages/MyCart';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +61,14 @@ const router = createBrowserRouter([
         element: <MyCart></MyCart>,
         loader: () =>
           fetch('https://prestige-car-hub-server.vercel.app/cartProduct'),
+      },
+      {
+        path: '/login',
+        element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
       },
     ],
   },
