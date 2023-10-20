@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleLogOut = () => {
     toast.success('Successfully logged-out', {
       style: {
-        background: '#FFB400',
+        background: '#4F46E5',
         color: 'white',
       },
     });

@@ -36,7 +36,7 @@ const Register = () => {
         setRegisterError('');
         toast.success('You have register successfully', {
           style: {
-            background: '#FFB400',
+            background: '#4F46E5',
             color: 'white',
           },
         });

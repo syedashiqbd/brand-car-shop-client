@@ -23,7 +23,7 @@ const Login = () => {
       .then(() => {
         toast.success('Successfully logged-in', {
           style: {
-            background: '#FFB400',
+            background: '#4F46E5',
             color: 'white',
           },
         });
@@ -47,7 +47,7 @@ const Login = () => {
       .then(() => {
         toast.success('Successfully logged-in', {
           style: {
-            background: '#FFB400',
+            background: '#4F46E5',
             color: 'white',
           },
         });
