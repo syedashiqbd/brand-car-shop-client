@@ -42,7 +42,7 @@ const UpdateProduct = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         <div className=" lg:py-16 lg:px-28 py-6 px-10 text-center ">
@@ -150,7 +150,7 @@ const UpdateProduct = () => {
             <input
               type="submit"
               value="Update Product"
-              className="btn w-full  mt-8"
+              className="btn w-full bg-[#FACC15] text-white border-none mt-8"
             />
           </form>
         </div>

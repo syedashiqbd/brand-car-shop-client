@@ -43,7 +43,7 @@ const ProductDetails = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         {/* product details page */}
@@ -82,7 +82,7 @@ const ProductDetails = () => {
                 <form className="mt-4 lg:w-1/4 w-full mx-auto">
                   <button
                     onClick={handleAddToCart}
-                    className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
+                    className="block w-full rounded text-gray-950 bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105"
                   >
                     Add to Cart
                   </button>

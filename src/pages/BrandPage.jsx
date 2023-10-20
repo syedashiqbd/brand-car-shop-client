@@ -10,7 +10,7 @@ const BrandPage = () => {
   const slider = sliderImage.filter((item) => item.brand === brandName);
   console.log(slider);
   return (
-    <div>
+    <div className="bg-white pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         {/* Slider here */}
@@ -91,14 +91,14 @@ const BrandPage = () => {
                       <div className="flex gap-4">
                         <form className="mt-4 w-full">
                           <Link to={`/productDetails/${brand._id}`}>
-                            <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                            <button className="block w-full rounded text-gray-950 bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
                               Details
                             </button>
                           </Link>
                         </form>
                         <form className="mt-4 w-full">
                           <Link to={`/updateProduct/${brand._id}`}>
-                            <button className="block w-full rounded bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
+                            <button className="block w-full rounded text-gray-950 bg-yellow-400 p-4 text-sm font-medium transition hover:scale-105">
                               Update
                             </button>
                           </Link>

@@ -1,19 +1,26 @@
+import { useContext } from 'react';
 import logo from '../assets/logo.png';
+import darkLogo from '../assets/darkLogo.png';
+import { authContext } from '../provider/AuthProvider';
 
 const Footer = () => {
+  const { theme } = useContext(authContext);
   return (
-    <footer className=" bg-[#FACC15]  mt-10">
+    <footer className=" bg-[#FACC15] dark:bg-gray-800">
       <div className="flex justify-between items-center p-10 lg:w-[1152px] w-[400px] mx-auto">
         <aside>
-          <img className="w-56 mb-5" src={logo} />
-          <p>
+          {/* <img className="w-40 mb-5" src={logo} /> */}
+          <img className="w-40" src={theme === 'dark' ? darkLogo : logo} />
+          <p className="text-gray-950 dark:text-purple-700 font-bold mt-4">
             Prestige Car Hub Ltd.
-            <br />
-            Providing reliable automotive since 1992
           </p>
+
+          <p>Providing reliable automotive since 1992</p>
         </aside>
         <nav>
-          <header className="footer-title ">Social</header>
+          <header className="text-end mb-4 text-xl font-semibold text-gray-950 dark:text-purple-700 ">
+            Social
+          </header>
           <div className="grid grid-flow-col gap-4">
             <a>
               <svg

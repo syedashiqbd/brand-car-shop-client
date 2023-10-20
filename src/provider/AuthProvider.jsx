@@ -52,6 +52,36 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
+  // Initialize the theme state from local storage or prefers-color-scheme
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme');
+    return (
+      savedTheme ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light')
+    );
+  });
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    // Save the theme preference in local storage
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const handleThemeSwitch = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+
+    // Update the local storage with the new theme
+    localStorage.setItem('theme', newTheme);
+  };
+
   const authInfo = {
     user,
     createUser,
@@ -59,6 +89,8 @@ const AuthProvider = ({ children }) => {
     logOut,
     logInWithGoogle,
     loading,
+    handleThemeSwitch,
+    theme,
   };
   return (
     <authContext.Provider value={authInfo}>{children}</authContext.Provider>

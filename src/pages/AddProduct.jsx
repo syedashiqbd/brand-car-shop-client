@@ -37,8 +37,8 @@ const AddProduct = () => {
   };
 
   return (
-    <div>
-        <Navbar></Navbar>
+    <div className="bg-white pb-10">
+      <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         <div className=" lg:py-16 lg:px-28 py-6 px-10 text-center ">
           <h1 className="divider my-10 text-gray-700 text-4xl font-semibold">
@@ -62,7 +62,11 @@ const AddProduct = () => {
                 <label className="label">
                   <span className="label-text">Brand Name</span>
                 </label>
-                <select name="brand" className="select select-bordered" required>
+                <select
+                  name="brand"
+                  className="select select-bordered"
+                  required
+                >
                   <option value="">Select a brand</option>
                   <option value="Mercedes-Benz">Mercedes-Benz</option>
                   <option value="BMW">BMW</option>
@@ -134,7 +138,7 @@ const AddProduct = () => {
             <input
               type="submit"
               value="Add product"
-              className="btn w-full bg-[#FFB400] text-white  mt-8"
+              className="btn w-full bg-[#FFB400] text-white border-none  mt-8"
             />
           </form>
         </div>

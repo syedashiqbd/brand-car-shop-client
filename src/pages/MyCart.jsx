@@ -36,7 +36,7 @@ const MyCart = () => {
   };
 
   return (
-    <div>
+    <div className="bg-white pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto ">
         <div className="overflow-x-auto min-h-screen ">

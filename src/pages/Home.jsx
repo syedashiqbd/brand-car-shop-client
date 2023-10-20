@@ -7,11 +7,11 @@ const Home = () => {
   const brands = useLoaderData();
 
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-700">
       <Navbar></Navbar>
       <Banner></Banner>
 
-      <div className="lg:w-[1152px] w-[400px] mx-auto my-10">
+      <div className="lg:w-[1152px] w-[400px] mx-auto mt-10 pb-10 ">
         {/* State */}
         <div className="flex justify-center">
           <div className=" lg:flex gap-10 ">
@@ -71,7 +71,7 @@ const Home = () => {
         </div>
 
         {/* Brand name area */}
-        <h1 className="divider my-16 text-gray-700 text-4xl font-semibold">
+        <h1 className="divider my-16  text-4xl font-bold text-gray-900 dark:text-gray-400">
           CHOOSE YOUR BRAND
         </h1>
         <div className="grid lg:grid-cols-2 gap-6 grid-cols-1">
@@ -91,11 +91,11 @@ const Home = () => {
               </div>
 
               <div className="lg:py-24">
-                <h2 className="text-3xl font-bold sm:text-4xl">
+                <h2 className="text-3xl font-bold sm:text-4xl text-gray-800 dark:text-gray-400">
                   Let us help you
                 </h2>
 
-                <p className="mt-4 text-gray-600">
+                <p className="mt-4 text-gray-900 dark:text-gray-500">
                   Tesla, Inc. is an American multinational automotive and clean
                   energy company headquartered in Austin, Texas, which designs
                   and manufactures electric vehicles, stationary battery energy
