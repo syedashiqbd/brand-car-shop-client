@@ -1,4 +1,4 @@
-# [Prestige Car Hub](https://prestige-car-hub-ashiq.web.app)
+# [Prestige Car Hub](https://prestige-carhub-ashiq.web.app)
 
 - User can know about the Branded Car selling company when he/she land in our Home page. Home page has a user friendly Navbar to navigate anywhere in this website.
 - The can see all renowned car company logo in home page and know the details when they clicked in the brand card then they land on relative brand page.
