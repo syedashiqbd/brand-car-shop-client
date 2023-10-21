@@ -67,7 +67,7 @@ const MyCart = () => {
                     <th className="text-center">Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-gray-950 dark:text-white">
                   {products?.map((prod, index) => (
                     <tr key={prod._id}>
                       <th>{index + 1}</th>
