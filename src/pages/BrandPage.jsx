@@ -10,7 +10,7 @@ const BrandPage = () => {
   const slider = sliderImage.filter((item) => item.brand === brandName);
   console.log(slider);
   return (
-    <div className="bg-white pb-10">
+    <div className="bg-white dark:bg-gray-700 pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         {/* Slider here */}
@@ -45,7 +45,7 @@ const BrandPage = () => {
         {/* product card */}
         {brands.length == 0 ? (
           <div className="grid content-center text-center h-[600px] ">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
               Product not available !!!
             </h1>
             <Link className="text-indigo-600 mt-6" to="/">
@@ -54,7 +54,7 @@ const BrandPage = () => {
           </div>
         ) : (
           <div>
-            <h1 className="divider my-16 text-gray-700 text-4xl font-semibold">
+            <h1 className="divider  lg:my-16 mt-16 mb-8 text-gray-700 lg:text-4xl   lg:font-semibold font-bold  text-center dark:text-white">
               Our Luxuries Collection for You
             </h1>
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
@@ -67,12 +67,14 @@ const BrandPage = () => {
                       className="h-56 w-full rounded-md object-cover"
                     />
                     <div className="mt-2">
-                      <div className="flex justify-between items-center">
+                      <div className="lg:flex justify-between items-center">
                         <div className="space-y-2">
                           <p className="text-sm text-gray-500">
                             ${brand.price}
                           </p>
-                          <p className="font-medium ">{brand.name}</p>
+                          <p className="font-medium dark:text-white ">
+                            {brand.name}
+                          </p>
                           <div className="flex gap-1">
                             <BsStarFill className="text-amber-400"></BsStarFill>
                             <BsStarFill className="text-amber-400"></BsStarFill>

@@ -36,14 +36,14 @@ const MyCart = () => {
   };
 
   return (
-    <div className="bg-white pb-10">
+    <div className="bg-white dark:bg-gray-700 pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto ">
+        <h1 className="divider my-10 text-gray-700 lg:text-4xl text-2xl font-semibold">
+          Your Cart Product
+        </h1>
         <div className="overflow-x-auto min-h-screen ">
-          <h1 className="divider my-10 text-gray-700 text-4xl font-semibold">
-            Your Cart Product
-          </h1>
-          <table className="table  ">
+          <table className="table dark:text-white   ">
             {/* head */}
             <thead className=" bg-indigo-600 text-white text-base font-semibold">
               <tr>

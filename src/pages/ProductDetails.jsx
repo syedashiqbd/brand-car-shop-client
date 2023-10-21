@@ -43,11 +43,11 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="bg-white pb-10">
+    <div className="bg-white dark:bg-gray-700 pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         {/* product details page */}
-        <h1 className="divider my-10 text-gray-700 text-4xl font-semibold">
+        <h1 className="divider my-10 text-gray-700 lg:text-4xl text-2xl font-semibold dark:text-white">
           Product Details
         </h1>
         <div>
@@ -58,10 +58,10 @@ const ProductDetails = () => {
               className="h-[500px] w-full rounded-md object-cover"
             />
             <div className="mt-2">
-              <div className="flex justify-between items-center">
+              <div className="lg:flex justify-between items-center">
                 <div className="space-y-2">
                   <p className="text-sm text-gray-500">${product.price}</p>
-                  <p className="font-medium ">{product.name}</p>
+                  <p className="font-medium dark:text-white ">{product.name}</p>
                   <div className="flex gap-1">
                     <BsStarFill className="text-amber-400"></BsStarFill>
                     <BsStarFill className="text-amber-400"></BsStarFill>
@@ -70,14 +70,14 @@ const ProductDetails = () => {
                     <BsStarHalf className="text-amber-400"></BsStarHalf>
                   </div>
                 </div>
-                <div className="text-end">
+                <div className="text-end lg:mt-0 mt-10">
                   <span className="whitespace-nowrap text-yellow-600  text-lg font-bold">
                     {product.brand}
                   </span>
                   <p className="text-gray-500 mt-2">{product.type}</p>
                 </div>
               </div>
-              <p className="mt-5">{product.description}</p>
+              <p className="mt-5 dark:text-gray-300">{product.description}</p>
               <div className="flex gap-4">
                 <form className="mt-4 lg:w-1/4 w-full mx-auto">
                   <button

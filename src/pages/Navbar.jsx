@@ -58,7 +58,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[2] p-2   rounded w-52 text-gray-900 dark:text-white  font-medium text-base "
+              className="menu menu-sm dropdown-content mt-3 z-[2] p-2   rounded w-52 text-white  dark:text-white bg-gray-700  font-medium text-base "
             >
               {navLinks}
             </ul>
@@ -114,7 +114,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content border  rounded-md w-52 space-y-2"
+                className="mt-3 z-[2] p-2 shadow menu menu-sm dropdown-content border  rounded-md w-52 space-y-2"
               >
                 <p className="font-bold mb-5 text-center border-b-2 border-black pb-2">
                   {user?.displayName}

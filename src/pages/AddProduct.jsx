@@ -41,7 +41,7 @@ const AddProduct = () => {
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         <div className=" lg:py-16 lg:px-28 py-6 px-10 text-center ">
-          <h1 className="divider my-10 text-gray-700 text-4xl font-semibold">
+          <h1 className="divider my-10 text-gray-700 lg:text-4xl text-2xl font-semibold">
             Add Product
           </h1>
           <form onSubmit={handleAddProduct}>

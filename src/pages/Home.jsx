@@ -77,7 +77,7 @@ const Home = () => {
         </div>
 
         {/* Brand name area */}
-        <h1 className="divider my-16  text-4xl font-bold text-gray-900 dark:text-gray-400">
+        <h1 className="divider lg:my-16 my-10  lg:text-4xl text-2xl font-bold text-gray-900 dark:text-gray-400">
           CHOOSE YOUR BRAND
         </h1>
         <div className="grid lg:grid-cols-2 gap-6 grid-cols-1">
@@ -96,18 +96,20 @@ const Home = () => {
                 />
               </div>
 
-              <div className="lg:py-24">
-                <h2 className="text-3xl font-bold sm:text-4xl text-gray-800 dark:text-gray-400">
-                  Let us help you
-                </h2>
-
-                <p className="mt-4 text-gray-900 dark:text-gray-500">
-                  Tesla, Inc. is an American multinational automotive and clean
-                  energy company headquartered in Austin, Texas, which designs
-                  and manufactures electric vehicles, stationary battery energy
-                  storage devices from home to grid-scale, solar panels and
-                  solar shingles, and related products and services
-                </p>
+              <div className="lg:py-24 text-center lg:text-left">
+                <div>
+                  <h2 className="text-3xl font-bold sm:text-4xl text-gray-800 dark:text-gray-400">
+                    Let us help you
+                  </h2>
+                  <p className="mt-4 text-gray-900 dark:text-gray-500">
+                    Tesla, Inc. is an American multinational automotive and
+                    clean energy company headquartered in Austin, Texas, which
+                    designs and manufactures electric vehicles, stationary
+                    battery energy storage devices from home to grid-scale,
+                    solar panels and solar shingles, and related products and
+                    services
+                  </p>
+                </div>
 
                 <Link className="mt-8 inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400">
                   Pick Yours Today

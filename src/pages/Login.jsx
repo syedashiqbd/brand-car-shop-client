@@ -65,15 +65,15 @@ const Login = () => {
       });
   };
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-700">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
-        <div className="lg:flex items-center justify-center my-20 gap-10">
+        <div className="lg:flex items-center justify-center mt-20 pb-20 gap-10">
           <div className="text-center lg:text-left">
             <img className="w-[500px]" src={loginSVG} alt="" />
           </div>
           <div>
-            <h1 className="text-5xl font-bold mb-8 text-center px-10">
+            <h1 className="text-5xl font-bold mb-8 text-center px-10 dark:text-white">
               Login now !
             </h1>
             <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
@@ -119,7 +119,7 @@ const Login = () => {
               </form>
             </div>
             <div className="flex flex-col w-full border-opacity-50 mb-4"></div>
-            <div className="divider mt-10">Login With</div>
+            <div className="divider mt-10 dark:text-white">Login With</div>
             <div className="grid card  rounded-box  ">
               <div className="flex justify-center gap-4">
                 <button
