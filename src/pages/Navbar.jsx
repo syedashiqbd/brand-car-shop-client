@@ -1,5 +1,5 @@
-import { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
 import toast from 'react-hot-toast';
 import userDefaultPic from '../assets/user.png';
@@ -19,15 +19,30 @@ const Navbar = () => {
   };
   const navLinks = (
     <>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/addProduct">Add Product</Link>
-      </li>
-      <li>
-        <Link to="/myCart">My Cart</Link>
-      </li>
+      <NavLink
+        to="/"
+        className={({ isActive, isPending }) =>
+          isPending ? 'pending' : isActive ? ' underline mr-4 ' : 'mr-4'
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/addProduct"
+        className={({ isActive, isPending }) =>
+          isPending ? 'pending' : isActive ? ' underline mr-4 ' : 'mr-4'
+        }
+      >
+        Add Product
+      </NavLink>
+      <NavLink
+        to="/myCart"
+        className={({ isActive, isPending }) =>
+          isPending ? 'pending' : isActive ? ' underline mr-4 ' : 'mr-4'
+        }
+      >
+        My Cart
+      </NavLink>
     </>
   );
 

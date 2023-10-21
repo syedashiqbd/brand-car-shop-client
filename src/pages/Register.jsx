@@ -57,15 +57,15 @@ const Register = () => {
       );
   };
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-700">
       <Navbar></Navbar>
-      <div className="lg:w-[1152px] w-[400px] mx-auto">
+      <div className="lg:w-[1152px] w-[400px] mx-auto pb-10">
         <div className="lg:flex items-center justify-center mt-20 gap-10">
           <div className="text-center lg:text-left">
             <img className="w-[600px]" src={registerSVG} alt="" />
           </div>
           <div>
-            <h1 className="text-5xl font-bold mb-8 text-center">
+            <h1 className="text-5xl font-bold mb-8 text-center dark:text-white">
               Register Please!
             </h1>
             <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">

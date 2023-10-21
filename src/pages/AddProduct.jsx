@@ -37,7 +37,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="bg-white pb-10">
+    <div className="bg-white dark:bg-gray-700 pb-10">
       <Navbar></Navbar>
       <div className="lg:w-[1152px] w-[400px] mx-auto">
         <div className=" lg:py-16 lg:px-28 py-6 px-10 text-center ">
