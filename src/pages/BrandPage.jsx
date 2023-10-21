@@ -43,16 +43,7 @@ const BrandPage = () => {
           ))}
         </div>
         {/* product card */}
-        {brands.length == 0 ? (
-          <div className="grid content-center text-center h-[600px] ">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-              Product not available !!!
-            </h1>
-            <Link className="text-indigo-600 mt-6" to="/">
-              Go Back Home
-            </Link>
-          </div>
-        ) : (
+        {brands.length ? (
           <div>
             <h1 className="divider  lg:my-16 mt-16 mb-8 text-gray-700 lg:text-4xl   lg:font-semibold font-bold  text-center dark:text-white">
               Our Luxuries Collection for You
@@ -111,6 +102,15 @@ const BrandPage = () => {
                 </div>
               ))}
             </div>
+          </div>
+        ) : (
+          <div className="grid content-center text-center h-[600px] ">
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+              Product not available !!!
+            </h1>
+            <Link className="text-indigo-600 mt-6" to="/">
+              Go Back Home
+            </Link>
           </div>
         )}
       </div>

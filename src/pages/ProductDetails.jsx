@@ -2,8 +2,13 @@ import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import Navbar from './Navbar';
 import Swal from 'sweetalert2';
+import { useContext } from 'react';
+import { authContext } from '../provider/AuthProvider';
 
 const ProductDetails = () => {
+  const { user } = useContext(authContext);
+  const userEmail = user.email;
+
   const allProducts = useLoaderData();
   const { id } = useParams();
 
@@ -17,7 +22,16 @@ const ProductDetails = () => {
   const rating = product.rating;
   const photo = product.photo;
 
-  const cartProduct = { name, brand, type, price, description, rating, photo };
+  const cartProduct = {
+    name,
+    brand,
+    type,
+    price,
+    description,
+    rating,
+    photo,
+    userEmail,
+  };
 
   const handleAddToCart = () => {
     console.log(cartProduct);
