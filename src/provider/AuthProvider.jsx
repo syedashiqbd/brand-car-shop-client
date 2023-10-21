@@ -52,7 +52,7 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  // Initialize the theme state from local storage or prefers-color-scheme
+  // theme state
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return (
@@ -70,7 +70,7 @@ const AuthProvider = ({ children }) => {
       document.documentElement.classList.remove('dark');
     }
 
-    // Save the theme preference in local storage
+    // Save to local storage
     localStorage.setItem('theme', theme);
   }, [theme]);
 
@@ -78,7 +78,7 @@ const AuthProvider = ({ children }) => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
 
-    // Update the local storage with the new theme
+    // Update the local storage
     localStorage.setItem('theme', newTheme);
   };
 

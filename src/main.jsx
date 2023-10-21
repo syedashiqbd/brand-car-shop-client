@@ -61,7 +61,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/updateProduct/:id',
-        element: <UpdateProduct></UpdateProduct>,
+        element: (
+          <PrivateRoute>
+            <UpdateProduct></UpdateProduct>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://prestige-car-hub-server.vercel.app/product/${params.id}`

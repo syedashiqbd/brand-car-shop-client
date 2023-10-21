@@ -44,9 +44,9 @@ const Navbar = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
-                fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
+                stroke="red"
+                fill=""
               >
                 <path
                   strokeLinecap="round"
@@ -58,7 +58,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2   rounded-box w-52 text-gray-900 dark:text-white  font-medium text-base"
+              className="menu menu-sm dropdown-content mt-3 z-[2] p-2   rounded w-52 text-gray-900 dark:text-white  font-medium text-base "
             >
               {navLinks}
             </ul>

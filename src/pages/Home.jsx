@@ -31,9 +31,11 @@ const Home = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">Total Sales</div>
+              <div className="stat-title dark:text-white">Total Sales</div>
               <div className="stat-value text-primary">25.6B</div>
-              <div className="stat-desc">21% more than last month</div>
+              <div className="stat-desc dark:text-white">
+                21% more than last month
+              </div>
             </div>
             <div className="stat max-w-xs">
               <div className="stat-figure text-secondary">
@@ -51,9 +53,9 @@ const Home = () => {
                   ></path>
                 </svg>
               </div>
-              <div className="stat-title">Brand Contact </div>
+              <div className="stat-title dark:text-white">Brand Contact </div>
               <div className="stat-value text-secondary">39</div>
-              <div className="stat-desc">6% each year</div>
+              <div className="stat-desc dark:text-white">6% each year</div>
             </div>
             <div className="stat max-w-xs">
               <div className="stat-figure text-secondary">
@@ -63,9 +65,13 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="stat-value">86%</div>
-              <div className="stat-title">Customer Satisfaction</div>
-              <div className="stat-desc text-secondary">31 unit in Quae</div>
+              <div className="stat-value dark:text-yellow-500">86%</div>
+              <div className="stat-title dark:text-white">
+                Customer Satisfaction
+              </div>
+              <div className="stat-desc dark:text-white text-secondary">
+                31 unit in Quae
+              </div>
             </div>
           </div>
         </div>
