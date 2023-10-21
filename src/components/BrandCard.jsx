@@ -10,7 +10,7 @@ const BrandCard = ({ brand }) => {
     <Link to={`/brand/${brand_name}`}>
       <img
         src={image_url}
-        className="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72"
+        className="h-56 w-full border rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72 transition-all duration-500 hover:bg-[#FACC15] dark:hover:bg-purple-100 "
       />
 
       <div className="mt-4 sm:flex sm:items-center sm:justify-center sm:gap-4">

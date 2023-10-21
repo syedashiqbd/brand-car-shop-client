@@ -1,35 +1,36 @@
 [
     {
       "id": 1,
-      "brand_name": "Mercedes-Benz",
-      "image_url": "https://images.unsplash.com/photo-1563694983011-6f4d90358083?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1887"
+      "brand_name": "Lamborghini",
+      "image_url": "https://i.ibb.co/B3FJjKg/Untitled-design-4.png"
+      
      
     },
     {
       "id": 2,
       "brand_name": "BMW",
-      "image_url": "https://images.unsplash.com/photo-1557053964-937650b63311?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1897"
+      "image_url": "https://1000logos.net/wp-content/uploads/2018/02/BMW-Logo-1963.png"
       
     },
     {
       "id": 3,
       "brand_name": "Ferrari",
-      "image_url": "https://images.unsplash.com/photo-1658905096536-20378475bdc6?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1964"
+      "image_url": "https://i.ibb.co/PjbVJCw/Untitled-design-2.png"
     },
     {
       "id": 4,
       "brand_name": "Porsche",
-      "image_url": "https://images.unsplash.com/photo-1658871210062-5e340a6f6567?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1887"
+      "image_url": "https://1000logos.net/wp-content/uploads/2018/02/Porsche-Logo.png"
     },
     {
       "id": 5,
       "brand_name": "Tesla",
-      "image_url": "https://images.unsplash.com/photo-1601158935942-52255782d322?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=1936"
+      "image_url": "https://i.ibb.co/vx1JpjJ/Untitled-design-3.png"
     },
     {
       "id": 6,
-      "brand_name": "Lamborghini",
-      "image_url": "https://images.unsplash.com/photo-1625811354078-1e6a34132752?auto=format&fit=crop&q=80&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&w=2042"
+      "brand_name": "Mercedes-Benz",
+      "image_url": "https://i.ibb.co/RHDMJ1v/Untitled-design-5.png"
     }
   ]
   
